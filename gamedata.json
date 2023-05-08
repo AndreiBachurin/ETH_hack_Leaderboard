@@ -1,0 +1,64 @@
+{
+  "levels": [
+      {
+      "name": "Find me",
+      "created": "2023-04-21",
+      "difficulty": "2",
+      "description": "FindMe.md",
+      "completedDescription": "Complete.md",
+      "levelContract": "FindMeFactory.sol",
+      "instanceContract": "FindMe.sol",
+      "revealCode": true,
+      "deployParams": [],
+      "deployFunds": 0,
+      "deployId": "1",
+      "instanceGas": 500000,
+      "author": "andbachurin"
+    },
+    {
+      "name": "Predict the future",
+      "created": "2023-04-24",
+      "difficulty": "4",
+      "description": "PredictTheFuture.md",
+      "completedDescription": "Complete.md",
+      "levelContract": "PredictTheFutureFactory.sol",
+      "instanceContract": "PredictTheFuture.sol",
+      "revealCode": true,
+      "deployParams": [],
+      "deployFunds": 0.01,
+      "deployId": "2",
+      "instanceGas": 500000,
+      "author": "andbachurin"
+    },
+    {
+      "name": "Lift",
+      "created": "2023-04-25",
+      "difficulty": "6",
+      "description": "Lift.md",
+      "completedDescription": "Complete.md",
+      "levelContract": "LiftFactory.sol",
+      "instanceContract": "Lift.sol",
+      "revealCode": true,
+      "deployParams": [],
+      "deployFunds": 0,
+      "deployId": "3",
+      "instanceGas": 500000,
+      "author": "andbachurin"
+    },
+    {
+      "name": "Lending pool",
+      "created": "2023-04-25",
+      "difficulty": "8",
+      "description": "LendingPool.md",
+      "completedDescription": "Complete.md",
+      "levelContract": "LendingPoolFactory.sol",
+      "instanceContract": "LendingPool.sol",
+      "revealCode": true,
+      "deployParams": [],
+      "deployFunds": 0.1,
+      "deployId": "4",
+      "instanceGas": 500000,
+      "author": "andbachurin"
+    }
+  ]
+}
