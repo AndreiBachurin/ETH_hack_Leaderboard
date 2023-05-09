@@ -2,7 +2,7 @@
 name: update leaderboard
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "5/5 * * * *"
   workflow_dispatch:
 jobs:
   crawl:
@@ -20,7 +20,7 @@ jobs:
           SEPOLIA_API_KEY: '${{ secrets.SEPOLIA_API_KEY }}'
           ARB_GOERLI_API_KEY: '${{ secrets.ARB_GOERLI_API_KEY }}'
           OPT_GOERLI_API_KEY: '${{ secrets.OPT_GOERLI_API_KEY }}'
-          MUMBAI_API_KEY: '${{ secrets.MUMBAI_API_KEY }}'
+          MUMBAI_API_KEY: '${{ process.env.MUMBAI_API_KEY }}'
       - name: Commit files
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
