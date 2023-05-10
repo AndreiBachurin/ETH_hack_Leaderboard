@@ -14,7 +14,7 @@ const createDifficultyMaps = async () => {
 };
 
 const getGameDataDeploy = async (network) => { 
-  const result = await fetch(`https://raw.githubusercontent.com/AndreiBachurin/ETHical_hacking/main/client/src/gamedata/gamedata.json`)
+  const result = await fetch(`https://raw.githubusercontent.com/AndreiBachurin/ETH_hack_Leaderboard/main/gamedata.json`)
   const data = await result.json()
   return data;
 }

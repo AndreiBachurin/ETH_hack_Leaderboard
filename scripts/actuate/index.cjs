@@ -21,7 +21,7 @@ const trigger = async () => {
 };
 
 const setGameData = async () => { 
-  const response = await axios.get('https://raw.githubusercontent.com/AndreiBachurin/ETHical_hacking/main/client/src/gamedata/gamedata.json')
+  const response = await axios.get('https://raw.githubusercontent.com/AndreiBachurin/ETH_hack_Leaderboard/main/gamedata.json')
   const gameData = response.data
   globalThis.gameData = gameData
 }
