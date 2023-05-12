@@ -24,7 +24,7 @@ jobs:
         SEPOLIA_API_KEY: ${{ secrets.SEPOLIA_API_KEY }}
         ARB_GOERLI_API_KEY: ${{ secrets.ARB_GOERLI_API_KEY }}
         OPT_GOERLI_API_KEY: ${{ secrets.OPT_GOERLI_API_KEY }}
-        MUMBAI_API_KEY: yIyNrD7IiS2qV-nU6gRcn-oMOyKXuYCn
+        MUMBAI_API_KEY: 8w_H-s0A7yXlwC8SWCvve0Qzz1J47TVR
     - name: Commit files
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"

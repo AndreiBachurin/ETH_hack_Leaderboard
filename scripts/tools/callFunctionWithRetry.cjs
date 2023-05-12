@@ -2,7 +2,7 @@ const DEFAULT_MAX_RETRIES = 10;
 
 const callFunctionWithRetry = async (
   promise,
-  maxNoOfTries = DEFAULT_MAX_RETRIES
+  maxNoOfTries = 2
 ) => {
   let noOfTries = 0;
   let result;
@@ -12,6 +12,7 @@ const callFunctionWithRetry = async (
       result = await promise();
       return result;
     } catch (error) {
+      console.log(error);
       console.log(`Try ${noOfTries + 1}/${maxNoOfTries} failed. Retrying...`);
       noOfTries++;
     }
