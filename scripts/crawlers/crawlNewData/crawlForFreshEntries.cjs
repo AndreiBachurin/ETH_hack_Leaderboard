@@ -12,11 +12,12 @@ const crawlForFreshEntries = async (network, web3, logger) => {
   await logger(
     `Buckle up, chuck, we're adding ${logs.length} emit profiles to lastCrawl${network.name}!`
   );
+  console.log("logs: ", logs);
   fs.writeFileSync(freshEntriesCrawlPath, JSON.stringify(logs));
   await updateNetworkPlayersBoard(network, logger);
   await updateNetworkDetails(network, upperBlock);
   // Fixes difficulty recalculation bug
-  fs.writeFileSync(freshEntriesCrawlPath, JSON.stringify([]));
+  //fs.writeFileSync(freshEntriesCrawlPath, JSON.stringify([]));
 };
 
 module.exports = crawlForFreshEntries;

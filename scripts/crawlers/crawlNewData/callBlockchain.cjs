@@ -37,8 +37,9 @@ const callBlockChain = async (network, web3, upperBlock) => {
       const chunkedLogs = chunk(logDump, NO_OF_PARALLEL_CALLS);
       for (let i = 0; i < chunkedLogs.length; i++) {
         const results = await Promise.all(
-          chunkedLogs[i].map((log) =>
-            getPlayerEntry({ log, web3, network, nodeProvider })
+          chunkedLogs[i].map((log) => {
+          console.log("log: ", log);
+            getPlayerEntry({ log, web3, network, nodeProvider })}
           )
         );
         const filteredResults = results.filter(
@@ -80,6 +81,7 @@ const getPlayerEntry = async ({ log, web3, network, nodeProvider }) => {
     dataArray3,
     String(log.topics[3])
   );
+  console.log("log.topics[3]: ", log.topics[3]);
   const additionalDifficultyFaced =
     await evaluateDifficultyInThisStatisticsEmit(
       network,

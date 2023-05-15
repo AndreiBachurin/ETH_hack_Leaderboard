@@ -6,38 +6,38 @@ const resolveNetworkApiKey = (network) => {
   let apiKey;
 
   switch (network.name) {
-    // case "Goerli": {
-    //   apiKey = process.env.GOERLI_API_KEY ? process.env.GOERLI_API_KEY : 0;
-    //   break;
-    // }
+    case "Goerli": {
+      apiKey = process.env.GOERLI_API_KEY ? process.env.GOERLI_API_KEY : 0;
+      break;
+    }
 
-    // case "Sepolia": {
-    //   apiKey = process.env.SEPOLIA_API_KEY ? process.env.SEPOLIA_API_KEY : 0;
-    //   break;
-    // }
+    case "Sepolia": {
+      apiKey = process.env.SEPOLIA_API_KEY ? process.env.SEPOLIA_API_KEY : 0;
+      break;
+    }
 
-    // case "Arbitrum": {
-    //   apiKey = process.env.ARB_GOERLI_API_KEY
-    //     ? process.env.ARB_GOERLI_API_KEY
-    //     : 0;
-    //   break;
-    // }
+    case "Arbitrum": {
+      apiKey = process.env.ARB_GOERLI_API_KEY
+        ? process.env.ARB_GOERLI_API_KEY
+        : 0;
+      break;
+    }
 
-    // case "Optimism": {
-    //   apiKey = process.env.OPT_GOERLI_API_KEY
-    //     ? process.env.OPT_GOERLI_API_KEY
-    //     : 0;
-    //   break;
-    // }
+    case "Optimism": {
+      apiKey = process.env.OPT_GOERLI_API_KEY
+        ? process.env.OPT_GOERLI_API_KEY
+        : 0;
+      break;
+    }
 
     case "Mumbai": {
       apiKey = process.env.MUMBAI_API_KEY ? process.env.MUMBAI_API_KEY : 0;
       break;
     }
 
-    // default: {
-    //   apiKey = -1;
-    // }
+    default: {
+      apiKey = -1;
+    }
   }
 
   return apiKey;

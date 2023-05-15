@@ -56,9 +56,10 @@ const getFilteredLog = async (
   web3,
   mappingDataPath
 ) => {
+  //console.log("log: ", log);
   let txn = await nodeProvider.getTransaction(log.transactionHash);
   let block = await nodeProvider.getBlock(log.blockNumber);
-console.log("log.topics[0] = ", log.topics[0]);
+
   const filteredLog = {
     player: String(txn.from),
     eventType:
