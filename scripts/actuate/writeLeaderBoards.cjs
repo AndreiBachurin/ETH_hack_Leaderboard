@@ -37,7 +37,7 @@ const writeLeaderBoards = async () => {
   // 3. write global leaderboard
   let allPlayersUnsorted = require(`../../${allPlayersBoardPath}`);
   let trimmedAllPlayersUnsorted = allPlayersUnsorted.filter((player) => {
-    return player != "0x3992542b66F63157265E37Ce9f727F9f65beE97f" && player.totalNumberOfLevelsCompleted >= 1 && player.totalNumberOfLevelsCompleted >= 4 && player.score < 1000;
+    return player.totalNumberOfLevelsCompleted >= 1 && player.totalNumberOfLevelsCompleted >= 4 && player.score < 1000;
   });
   let leaderBoard = trimmedAllPlayersUnsorted.sort((a, b) => {
     return b.playerScore - a.playerScore;
